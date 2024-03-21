@@ -1,10 +1,10 @@
 import './App.css'
 import Home from '../../pages/Home'
 import { Route, Routes } from 'react-router-dom'
-import Work from '../../pages/Work'
-import Layout from '../Layout/Layout'
+import Layout from '../Layout'
 import { Suspense } from 'react'
-import NotFound from '../../pages/NotFound/NotFound'
+import NotFound from '../../pages/NotFound'
+import Item from '../../pages/Item'
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
       <Routes>
           <Route path='/' element={<Layout /> }>
           <Route index element={<Home />} />
-          <Route path='work' element={<Work />} />
+          <Route path='/:itemId' element={<Item />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
